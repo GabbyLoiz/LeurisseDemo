@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LEURISSE</title>
+    <link rel="stylesheet" type="text/css" href="CSS/Main_Design.css">
+    <link rel="stylesheet" type="text/css" href="CSS/ImageGallery.css">
+    
+</head>
+<body onload="LoadProducts()" background="Images/bg.png">
+    <!-- Top -->
+    <div class="brown" height="75px">
+        <div>
+            <img src="./Images/logo.png" id="Logo" class="zone" align="center">
+            <img src="./Images/addtocart.png" id="AddToCart" class="zone" width="50px" height="50px" align="right" onclick="OpenCart()">
+        </div>
+    </div>
+
+    <!-- Modal content -->
+    <div id="CartModal" class="modal" >
+
+        <!-- Modal content -->
+        <div class="modal-content">
+            <div class="modal-header">
+                <span class="close">&times;</span>
+                <h2 id="nameCart">Cart</h2>
+            </div>
+            <div class="modal-body">
+                
+                <br/>
+                <div id="CartDiv"></div>
+                </div>
+                <button id="CartOrder" class="btn info">Order Now</button>
+                <br/>
+                <br/>
+            </div>
+        </div>
+    </div>
+
+    <!-- Image Carousel -->
+    <div class="slideshow-container">
+        <div class="mySlides fade">
+            <div class="numbertext">1 / 5</div>
+            <img src="Images/boydress1.png" style="width:100%">
+            <div class="text">Explore You.</div>
+        </div>
+        
+        <div class="mySlides fade">
+            <div class="numbertext">2 / 5</div>
+            <img src="Images/girldress1.png" style="width:100%">
+            <div class="text">Feel trendy. Feel authentic.</div>
+        </div>
+        
+        <div class="mySlides fade">
+            <div class="numbertext">3 / 5</div>
+            <img src="Images/girldress.png" style="width:100%">
+            <div class="text">Be comfortable, Be inspired, Be right at home.</div>
+        </div>
+
+        <div class="mySlides fade">
+            <div class="numbertext">4 / 5</div>
+            <img src="Images/girldress2.png" style="width:100%">
+            <div class="text">The ultimate clothing to see the world in.</div>
+        </div>
+        
+        <div class="mySlides fade">
+            <div class="numbertext">5 / 5</div>
+            <img src="Images/girldress3.png" style="width:100%">
+            <div class="text">Made for Pleasure. Made for Style</div>
+        </div>
+        
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>  
+    </div>
+    <br/>
+
+    <div style="text-align:center">
+      <span class="dot" onclick="currentSlide(1)"></span> 
+      <span class="dot" onclick="currentSlide(2)"></span> 
+      <span class="dot" onclick="currentSlide(3)"></span> 
+      <span class="dot" onclick="currentSlide(4)"></span> 
+      <span class="dot" onclick="currentSlide(5)"></span> 
+    </div>
+
+    <!-- Women Apparel -->
+    <h1>Women's Apparel</h1>
+    <div class="apparel grid-row" id="Women">
+    </div>
+
+    <br/>
+
+    <!-- Men Apparel -->
+    <h1>Men's Apparel</h1>
+    <div class="apparel grid-row" id="Men">
+    </div>
+
+    <br/>
+    <br/>
+
+    <div id="ImageModal" class="modal">
+        <!-- Modal content -->
+        <div class="modal-content">
+            <div class="modal-header">
+                <span class="close">&times;</span>
+                <h2 id="nameImage">Modal Header</h2>
+            </div>
+            <div class="modal-body grid-row">
+                <div>
+                    <img id="cartDress" src="" alt="dress" class="dress">
+                </div>
+                <div>
+                    <img id="cartDress1" src="" alt="dress" class="thumbnail_dress" onclick="ChangeDress(1)" onmouseover="ChangeDress(1)">
+                    <img id="cartDress2" src="" alt="dress" class="thumbnail_dress" onclick="ChangeDress(2)" onmouseover="ChangeDress(2)">
+                    <img id="cartDress3" src="" alt="dress" class="thumbnail_dress" onclick="ChangeDress(3)" onmouseover="ChangeDress(3)">
+                    <h3 id="price">Price is here!</h3>
+                </div>
+
+                <button id="CartAdd" class="btn info">Add To Cart</button>
+                <br/><br/><br/>
+            </div>
+        </div>
+    </div>
+
+    <script src="JS/ImageGallery.js"></script>
+    <script src="JS/ModalGallery.js"></script>
+    <script src="JS/Main_Data.js"></script>
+</body>
+</html>
